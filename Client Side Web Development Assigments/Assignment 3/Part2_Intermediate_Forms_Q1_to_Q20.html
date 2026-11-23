@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Assignment 3 - Intermediate Form Questions (Q1-Q20)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .q-box { border: 1px solid #cbd5e0; padding: 14px; margin-bottom: 16px; border-radius: 6px; }
+        h3 { margin-top: 0; color: #2f855a; }
+    </style>
+</head>
+<body>
+    <h1>HTML Assignment 3: Forms (Intermediate Questions 1 - 20)</h1>
+
+    <!-- Q1: Login Form -->
+    <div class="q-box">
+        <h3>Q1. Login Form</h3>
+        <form action="#">
+            Username: <input type="text" required>
+            Password: <input type="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Q2: Contact Form -->
+    <div class="q-box">
+        <h3>Q2. Contact Form</h3>
+        <form action="#">
+            Name: <input type="text" required><br>
+            Email: <input type="email" required><br>
+            Phone: <input type="tel" required><br>
+            Message: <textarea rows="2"></textarea><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <!-- Q3: Payment Method Radio Buttons -->
+    <div class="q-box">
+        <h3>Q3. Payment Method</h3>
+        <form>
+            <input type="radio" name="pay" value="Card"> Credit Card
+            <input type="radio" name="pay" value="UPI"> UPI
+            <input type="radio" name="pay" value="COD"> Cash on Delivery
+        </form>
+    </div>
+
+    <!-- Q4: Multiple Languages Checkboxes -->
+    <div class="q-box">
+        <h3>Q4. Select Multiple Languages</h3>
+        <form>
+            <input type="checkbox" name="lang" value="English"> English
+            <input type="checkbox" name="lang" value="Hindi"> Hindi
+            <input type="checkbox" name="lang" value="French"> French
+            <input type="checkbox" name="lang" value="Spanish"> Spanish
+        </form>
+    </div>
+
+    <!-- Q5: Age Restricted 18-60 -->
+    <div class="q-box">
+        <h3>Q5. Age Restricted (18 - 60)</h3>
+        <form action="#">
+            Age: <input type="number" min="18" max="60" required>
+            <input type="submit" value="Check">
+        </form>
+    </div>
+
+    <!-- Q6: 10-Digit Phone Pattern Validation -->
+    <div class="q-box">
+        <h3>Q6. 10-Digit Phone Pattern Validation</h3>
+        <form action="#">
+            Phone: <input type="tel" pattern="[0-9]{10}" title="Enter 10 digits" placeholder="9876543210" required>
+            <input type="submit" value="Validate">
+        </form>
+    </div>
+
+    <!-- Q7: PDF Only File Upload -->
+    <div class="q-box">
+        <h3>Q7. PDF Only File Upload</h3>
+        <form>
+            Upload Resume (PDF only): <input type="file" accept=".pdf,application/pdf">
+        </form>
+    </div>
+
+    <!-- Q8: Profession Dropdown -->
+    <div class="q-box">
+        <h3>Q8. Profession Dropdown</h3>
+        <form>
+            Profession:
+            <select name="profession">
+                <option>Student</option>
+                <option>Teacher</option>
+                <option>Developer</option>
+                <option>Designer</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- Q9: Disable Submit Until Terms Checked -->
+    <div class="q-box">
+        <h3>Q9. Disable Submit Until Terms &amp; Conditions Checked</h3>
+        <form>
+            <input type="checkbox" id="termsChk" onchange="document.getElementById('termsBtn').disabled = !this.checked;">
+            <label for="termsChk">I agree to Terms &amp; Conditions</label><br>
+            <button type="submit" id="termsBtn" disabled>Submit</button>
+        </form>
+    </div>
+
+    <!-- Q10: Fieldset & Legend for Address -->
+    <div class="q-box">
+        <h3>Q10. Address Details Fieldset</h3>
+        <form>
+            <fieldset>
+                <legend>Address Details</legend>
+                Street: <input type="text"><br>
+                City: <input type="text"><br>
+                Pin Code: <input type="text">
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Q11: Email Format Validation -->
+    <div class="q-box">
+        <h3>Q11. Email Format Validation</h3>
+        <form action="#">
+            Email: <input type="email" placeholder="abc@mail.com" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Q12: Placeholder Attribute -->
+    <div class="q-box">
+        <h3>Q12. Placeholder Guidance</h3>
+        <form>
+            <input type="text" placeholder="e.g., John Doe">
+        </form>
+    </div>
+
+    <!-- Q13: Password and Confirm Password -->
+    <div class="q-box">
+        <h3>Q13. Password &amp; Confirm Password</h3>
+        <form onsubmit="if(p1.value !== p2.value){alert('Passwords do not match!'); return false;}">
+            Password: <input type="password" id="p1" required>
+            Confirm Password: <input type="password" id="p2" required>
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+
+    <!-- Q14: Reset Button Test -->
+    <div class="q-box">
+        <h3>Q14. Reset Button Test</h3>
+        <form>
+            Field 1: <input type="text" value="Sample A">
+            Field 2: <input type="text" value="Sample B">
+            <input type="reset" value="Clear All">
+        </form>
+    </div>
+
+    <!-- Q15: Newsletter Signup -->
+    <div class="q-box">
+        <h3>Q15. Newsletter Signup Form</h3>
+        <form action="#">
+            Name: <input type="text" placeholder="Your Name" required>
+            Email: <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <!-- Q16: Disabled and Readonly Inputs -->
+    <div class="q-box">
+        <h3>Q16. Disabled vs Readonly Input</h3>
+        <form>
+            Readonly (Submitted with form): <input type="text" value="READONLY-101" readonly><br>
+            Disabled (Cannot focus/submit): <input type="text" value="DISABLED-999" disabled>
+        </form>
+    </div>
+
+    <!-- Q17: Hidden Input Field -->
+    <div class="q-box">
+        <h3>Q17. Hidden Input Field</h3>
+        <form>
+            <input type="hidden" name="user_id" value="USR_7845">
+            <span>Hidden User ID (<code>USR_7845</code>) is embedded inside this form.</span>
+        </form>
+    </div>
+
+    <!-- Q18: Experience Rating Range (1-10) -->
+    <div class="q-box">
+        <h3>Q18. Experience Rating Range (1 to 10)</h3>
+        <form>
+            Rating: <input type="range" min="1" max="10" value="7" oninput="rateOut.value = this.value">
+            <output id="rateOut">7</output>/10
+        </form>
+    </div>
+
+    <!-- Q19: Colour Picker Changing Background -->
+    <div class="q-box" id="colorBox">
+        <h3>Q19. Colour Picker for Background</h3>
+        <form>
+            Pick Box Background Color:
+            <input type="color" value="#ffffff" onchange="document.getElementById('colorBox').style.backgroundColor = this.value;">
+        </form>
+    </div>
+
+    <!-- Q20: Tel Input Type -->
+    <div class="q-box">
+        <h3>Q20. Tel Input Type</h3>
+        <form>
+            Telephone: <input type="tel" placeholder="+91-98765-43210">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3 - Hospital Registration Form</title>
+</head>
+<body>
+    <h2>Hospital Patient Registration Form</h2>
+    <form onsubmit="registerPatient(event)">
+        Patient Name: <input type="text" id="patName" required><br><br>
+        Age: <input type="number" id="patAge" min="0" max="120" required><br><br>
+        Department:
+        <select id="patDept">
+            <option value="General Medicine">General Medicine</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Orthopedics">Orthopedics</option>
+        </select><br><br>
+        <button type="submit">Generate OPD Slip</button>
+    </form>
+    <div id="opdSlip" style="margin-top: 15px; font-weight: bold;"></div>
+
+    <script>
+        function registerPatient(e) {
+            e.preventDefault();
+            const name = document.getElementById("patName").value;
+            const age = document.getElementById("patAge").value;
+            const dept = document.getElementById("patDept").value;
+            const token = Math.floor(100 + Math.random() * 900);
+
+            document.getElementById("opdSlip").innerHTML = 
+                `OPD Token #${token} | Patient: ${name} (Age: ${age}) | Dept: ${dept}`;
+        }
+    </script>
+</body>
+</html>

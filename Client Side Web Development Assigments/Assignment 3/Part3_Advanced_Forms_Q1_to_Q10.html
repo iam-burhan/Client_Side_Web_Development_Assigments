@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Assignment 3 - Advanced Form Questions (Q1-Q10)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .q-box { border: 1px solid #a0aec0; padding: 15px; margin-bottom: 20px; border-radius: 6px; }
+        h3 { margin-top: 0; color: #9b2c2c; }
+    </style>
+</head>
+<body>
+    <h1>HTML Assignment 3: Forms (Advanced Questions 1 - 10)</h1>
+
+    <!-- Q1: Complete Registration Form with Validation -->
+    <div class="q-box">
+        <h3>Q1. Full Registration Form</h3>
+        <form onsubmit="if(regP1.value !== regP2.value){alert('Passwords do not match'); return false;}">
+            Name: <input type="text" required><br>
+            Email: <input type="email" required><br>
+            Password: <input type="password" id="regP1" minlength="6" required><br>
+            Confirm Password: <input type="password" id="regP2" required><br>
+            Gender: <input type="radio" name="rg" required> Male <input type="radio" name="rg"> Female<br>
+            Country:
+            <select required>
+                <option value="">--Select--</option>
+                <option value="IN">India</option>
+                <option value="US">USA</option>
+            </select><br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Q2: Strong Password Pattern (8+ chars, 1 uppercase, 1 number) -->
+    <div class="q-box">
+        <h3>Q2. Strong Password Pattern Validation</h3>
+        <form action="#">
+            Password (8+ chars, 1 Capital, 1 Number):
+            <input type="password" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" 
+                   title="Must contain at least 8 characters, 1 uppercase letter, and 1 number" required>
+            <button type="submit">Validate</button>
+        </form>
+    </div>
+
+    <!-- Q3: Multi-Step Form -->
+    <div class="q-box">
+        <h3>Q3. Multi-Step Form</h3>
+        <form id="multiStepForm" onsubmit="alert('Multi-step form submitted!'); return false;">
+            <div id="step1">
+                <b>Step 1: Personal Info</b><br>
+                Full Name: <input type="text" id="msName"><br>
+                <button type="button" onclick="step1.style.display='none'; step2.style.display='block';">Next &rarr;</button>
+            </div>
+            <div id="step2" style="display:none;">
+                <b>Step 2: Contact Info</b><br>
+                Email: <input type="email" id="msEmail"><br>
+                <button type="button" onclick="step2.style.display='none'; step1.style.display='block';">&larr; Back</button>
+                <button type="button" onclick="step2.style.display='none'; step3.style.display='block';">Next &rarr;</button>
+            </div>
+            <div id="step3" style="display:none;">
+                <b>Step 3: Review &amp; Submit</b><br>
+                <p>Click submit to finalize your registration.</p>
+                <button type="button" onclick="step3.style.display='none'; step2.style.display='block';">&larr; Back</button>
+                <button type="submit">Submit Final</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Q4: Comprehensive Survey Form -->
+    <div class="q-box">
+        <h3>Q4. Survey Form</h3>
+        <form action="#">
+            Participant Name: <input type="text" required><br>
+            Satisfaction: <input type="radio" name="sat"> High <input type="radio" name="sat"> Medium<br>
+            Topics Liked: <input type="checkbox"> HTML <input type="checkbox"> CSS <input type="checkbox"> JS<br>
+            Role: <select><option>Student</option><option>Professional</option></select><br>
+            Suggestions:<br><textarea rows="2" cols="35"></textarea><br>
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+
+    <!-- Q5: Job Application Form (PDF or DOC only) -->
+    <div class="q-box">
+        <h3>Q5. Job Application Form (PDF / DOC Only)</h3>
+        <form action="#">
+            Applicant Name: <input type="text" required><br>
+            Upload CV (.pdf, .doc, .docx): <input type="file" accept=".pdf,.doc,.docx" required><br>
+            <button type="submit">Apply Now</button>
+        </form>
+    </div>
+
+    <!-- Q6: Disable Submit When Required Fields Empty -->
+    <div class="q-box">
+        <h3>Q6. Disable Submit Until Required Fields Are Filled</h3>
+        <form id="autoDisableForm" oninput="q6Btn.disabled = !(q6Name.value.trim() && q6Email.value.trim());">
+            Name *: <input type="text" id="q6Name" required>
+            Email *: <input type="email" id="q6Email" required>
+            <button type="submit" id="q6Btn" disabled>Submit</button>
+        </form>
+    </div>
+
+    <!-- Q7: Accessible Form with ARIA Labels & Roles -->
+    <div class="q-box">
+        <h3>Q7. Accessible Form with ARIA Labels &amp; Roles</h3>
+        <form role="form" aria-label="Accessible Search and Filter Form">
+            <input type="search" aria-label="Search documentation" placeholder="Search...">
+            <div role="group" aria-label="Filter Options">
+                <input type="checkbox" id="ariaChk" aria-checked="false">
+                <label for="ariaChk">Include Archived</label>
+            </div>
+            <button type="submit" aria-label="Execute Search">Search</button>
+        </form>
+    </div>
+
+    <!-- Q8: Booking Date (Today or Later) -->
+    <div class="q-box">
+        <h3>Q8. Booking Date (Today or Later)</h3>
+        <form action="#">
+            Select Booking Date: <input type="date" id="bookingDate" required>
+            <button type="submit">Book</button>
+        </form>
+        <script>
+            // Dynamically set 'min' attribute to today's YYYY-MM-DD date
+            document.getElementById('bookingDate').min = new Date().toISOString().split('T')[0];
+        </script>
+    </div>
+
+    <!-- Q9: Profile Settings Form -->
+    <div class="q-box">
+        <h3>Q9. Profile Settings Form</h3>
+        <form action="#">
+            Display Name: <input type="text" value="Aarav Sharma"><br>
+            Profile Picture: <input type="file" accept="image/*"><br>
+            Theme Accent Color: <input type="color" value="#2b6cb0"><br>
+            <button type="submit">Save Settings</button>
+        </form>
+    </div>
+
+    <!-- Q10: Feedback Form with Star Rating -->
+    <div class="q-box">
+        <h3>Q10. Feedback Form with Star Rating</h3>
+        <form action="#">
+            Rate Us:
+            <label><input type="radio" name="stars" value="1"> &#9733; (1)</label>
+            <label><input type="radio" name="stars" value="2"> &#9733;&#9733; (2)</label>
+            <label><input type="radio" name="stars" value="3"> &#9733;&#9733;&#9733; (3)</label>
+            <label><input type="radio" name="stars" value="4"> &#9733;&#9733;&#9733;&#9733; (4)</label>
+            <label><input type="radio" name="stars" value="5" checked> &#9733;&#9733;&#9733;&#9733;&#9733; (5)</label><br>
+            Comment:<br><textarea rows="2" cols="35" placeholder="Your feedback..."></textarea><br>
+            <button type="submit">Send Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

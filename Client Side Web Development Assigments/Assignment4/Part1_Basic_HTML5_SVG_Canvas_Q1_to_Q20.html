@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Assignment 4 - Basic Questions (Q1-Q20)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.5; }
+        .q-box { border: 1px solid #cbd5e0; padding: 12px; margin-bottom: 16px; border-radius: 5px; }
+        h3 { margin-top: 0; color: #2b6cb0; }
+        .horiz-nav a { display: inline-block; margin-right: 15px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>HTML Assignment 4: HTML5 Semantic, SVG &amp; Canvas (Basic Q1 - Q20)</h1>
+
+    <!-- Q1 & Q2: Header with Website Title and Footer -->
+    <div class="q-box">
+        <h3>Q1 &amp; Q2. Header with Title &amp; Footer</h3>
+        <header><h2>My Semantic Website</h2></header>
+        <footer><small>&copy; 2026 My Semantic Website</small></footer>
+    </div>
+
+    <!-- Q3: Nav with Home, About, Contact -->
+    <div class="q-box">
+        <h3>Q3. Navigation Bar</h3>
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Q4: Paragraph inside <main> -->
+    <div class="q-box">
+        <h3>Q4. Main Element</h3>
+        <main>
+            <p>This paragraph is placed inside the primary <code>&lt;main&gt;</code> content area.</p>
+        </main>
+    </div>
+
+    <!-- Q5: Two topics using <section> -->
+    <div class="q-box">
+        <h3>Q5. Sections for Two Topics</h3>
+        <section>
+            <h4>Topic 1: HTML5 Semantics</h4>
+            <p>Semantic tags describe the meaning of content to browsers and developers.</p>
+        </section>
+        <section>
+            <h4>Topic 2: Scalable Vector Graphics</h4>
+            <p>SVG defines vector-based graphics in XML format.</p>
+        </section>
+    </div>
+
+    <!-- Q6: Blog post with <article> -->
+    <div class="q-box">
+        <h3>Q6. Article Tag</h3>
+        <article>
+            <h4>Getting Started with HTML5</h4>
+            <p>HTML5 introduces native multimedia, canvas drawing, and cleaner structural tags.</p>
+        </article>
+    </div>
+
+    <!-- Q7: <aside> showing related links -->
+    <div class="q-box">
+        <h3>Q7. Aside Tag</h3>
+        <aside>
+            <h4>Related Links</h4>
+            <ul>
+                <li><a href="#">MDN HTML5 Reference</a></li>
+                <li><a href="#">W3C HTML Standard</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Q8: Image inside <figure> with <figcaption> -->
+    <div class="q-box">
+        <h3>Q8. Figure and Figcaption</h3>
+        <figure>
+            <svg width="140" height="70"><rect width="140" height="70" fill="#4299e1"/></svg>
+            <figcaption>Figure 1: Sample blue graphic inside a figure element.</figcaption>
+        </figure>
+    </div>
+
+    <!-- Q9: <time> tag representing today's date -->
+    <div class="q-box">
+        <h3>Q9. Time Tag</h3>
+        <p>Annual Tech Fest Event Date: <time datetime="2026-11-22">November 22, 2026</time>.</p>
+    </div>
+
+    <!-- Q10: Contact info using <address> -->
+    <div class="q-box">
+        <h3>Q10. Address Tag</h3>
+        <address>
+            Written by Web Dev Team.<br>
+            IMED Campus, Kothrud, Pune, Maharashtra.
+        </address>
+    </div>
+
+    <!-- Q11: Header, Main, Footer Layout -->
+    <div class="q-box">
+        <h3>Q11. Header, Main, Footer Layout</h3>
+        <header><b>Page Header</b></header>
+        <main><p>Core Page Content</p></main>
+        <footer><b>Page Footer</b></footer>
+    </div>
+
+    <!-- Q12: Horizontal Navigation -->
+    <div class="q-box">
+        <h3>Q12. Horizontal Nav Links</h3>
+        <nav class="horiz-nav">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Q13: Publication date using <time> -->
+    <div class="q-box">
+        <h3>Q13. Article Publication Date</h3>
+        <article>
+            <h4>Web Standards Update</h4>
+            <p>Published on <time datetime="2026-11-22">22 Nov 2026</time></p>
+        </article>
+    </div>
+
+    <!-- Q14: Blog page with one <article> inside <main> -->
+    <div class="q-box">
+        <h3>Q14. Blog Page Structure</h3>
+        <main>
+            <article>
+                <h4>Single Blog Entry</h4>
+                <p>This article sits directly inside the main container.</p>
+            </article>
+        </main>
+    </div>
+
+    <!-- Q15: Two images with captions using <figure> -->
+    <div class="q-box">
+        <h3>Q15. Two Figures with Captions</h3>
+        <figure style="display:inline-block;">
+            <svg width="100" height="60"><rect width="100" height="60" fill="#ed8936"/></svg>
+            <figcaption>Caption 1</figcaption>
+        </figure>
+        <figure style="display:inline-block;">
+            <svg width="100" height="60"><rect width="100" height="60" fill="#48bb78"/></svg>
+            <figcaption>Caption 2</figcaption>
+        </figure>
+    </div>
+
+    <!-- Q16: Developer's email using <address> -->
+    <div class="q-box">
+        <h3>Q16. Developer Email in Address</h3>
+        <address>
+            Developer Contact: <a href="mailto:dev@webportal.com">dev@webportal.com</a>
+        </address>
+    </div>
+
+    <!-- Q17: Draw a rectangle using inline <svg> -->
+    <div class="q-box">
+        <h3>Q17. SVG Rectangle</h3>
+        <svg width="160" height="80">
+            <rect x="10" y="10" width="140" height="60" fill="#3182ce" />
+        </svg>
+    </div>
+
+    <!-- Q18: Draw a circle using <svg> -->
+    <div class="q-box">
+        <h3>Q18. SVG Circle</h3>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" fill="#e53e3e" />
+        </svg>
+    </div>
+
+    <!-- Q19: Draw a line using SVG -->
+    <div class="q-box">
+        <h3>Q19. SVG Line</h3>
+        <svg width="160" height="60">
+            <line x1="10" y1="10" x2="150" y2="50" stroke="black" stroke-width="3" />
+        </svg>
+    </div>
+
+    <!-- Q20: Simple <canvas> with border -->
+    <div class="q-box">
+        <h3>Q20. Simple Canvas with Border</h3>
+        <canvas id="basicCanvas" width="200" height="80" style="border: 2px solid black;"></canvas>
+    </div>
+</body>
+</html>

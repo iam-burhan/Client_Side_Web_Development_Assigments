@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q10 - Nested Tables Layouts</title>
+</head>
+<body>
+    <!-- ========================================== -->
+    <!-- LAYOUT 1: Nested Tables (4 Columns)        -->
+    <!-- ========================================== -->
+    <h2>Nested Tables (Layout 1)</h2>
+    <table border="1" cellpadding="6" cellspacing="2">
+        <tr>
+            <th>Header column 1</th>
+            <th>Header column 2</th>
+            <th>Header column 3</th>
+            <th>Header column 4</th>
+        </tr>
+        <tr>
+            <td>Row 2 - Item 1</td>
+            <td>Row 2 - Item 2</td>
+            <td rowspan="2">
+                <b>Row 2: Nested Table 1</b><br><br>
+                <table border="1" cellpadding="4">
+                    <tr>
+                        <th>Row 1 Header</th>
+                        <td>item</td>
+                    </tr>
+                    <tr>
+                        <th>Row 2 Header</th>
+                        <td>item</td>
+                    </tr>
+                    <tr>
+                        <th>Row 2 Header</th>
+                        <td>item</td>
+                    </tr>
+                </table>
+            </td>
+            <td>Row 2 - Item 4<br>A second line</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Row 3: Nested Table 2</b><br><br>
+                <table border="1" cellpadding="4">
+                    <tr>
+                        <th>Row 1 Header</th>
+                        <td>item</td>
+                    </tr>
+                    <tr>
+                        <th>Row 2 Header</th>
+                        <td>item</td>
+                    </tr>
+                </table>
+            </td>
+            <td>Row 3 - Item 2</td>
+            <td rowspan="2">Row 3 - Item 3</td>
+        </tr>
+        <tr>
+            <td>Row 4 - Item 1</td>
+            <td>Row 4 - Item 2</td>
+            <td>Row 4 - Item 3</td>
+        </tr>
+        <tr>
+            <td colspan="4">Row 5 - Last row of outer table</td>
+        </tr>
+    </table>
+
+    <br><hr><br>
+
+    <!-- ========================================== -->
+    <!-- LAYOUT 2: Nested Table (3 Columns)         -->
+    <!-- ========================================== -->
+    <h2>NESTED TABLE (Layout 2)</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>
+                Table Data
+                <table border="1" cellpadding="6" cellspacing="0">
+                    <tr>
+                        <th>Table Heading</th>
+                        <th>Table Heading</th>
+                        <th>Table Heading</th>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                </table>
+            </td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </table>
+
+    <br><hr><br>
+
+    <!-- ========================================== -->
+    <!-- LAYOUT 3: GeeksforGeeks Nested Table       -->
+    <!-- ========================================== -->
+    <h2 style="color: green;">GeeksforGeeks (Layout 3)</h2>
+    <table border="1" cellpadding="10" cellspacing="2">
+        <tr>
+            <td>Table 1</td>
+            <td align="center">
+                Table 1
+                <table border="1" cellpadding="10" cellspacing="2" style="border-color: blue;">
+                    <tr>
+                        <td>Table 2</td>
+                        <td>Table 2</td>
+                    </tr>
+                    <tr>
+                        <td>Table 2</td>
+                        <td>Table 2</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Table 1</td>
+            <td align="center">Table 1</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q9 - JavaScript Calculator</title>
+</head>
+<body>
+    <h2>Basic Arithmetic Calculator</h2>
+    <input type="text" id="display" readonly style="width: 170px; font-size: 18px; text-align: right;"><br><br>
+    <div>
+        <button onclick="appendVal('7')">7</button>
+        <button onclick="appendVal('8')">8</button>
+        <button onclick="appendVal('9')">9</button>
+        <button onclick="appendVal('/')">/</button><br>
+        <button onclick="appendVal('4')">4</button>
+        <button onclick="appendVal('5')">5</button>
+        <button onclick="appendVal('6')">6</button>
+        <button onclick="appendVal('*')">*</button><br>
+        <button onclick="appendVal('1')">1</button>
+        <button onclick="appendVal('2')">2</button>
+        <button onclick="appendVal('3')">3</button>
+        <button onclick="appendVal('-')">-</button><br>
+        <button onclick="clearDisp()">C</button>
+        <button onclick="appendVal('0')">0</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendVal('+')">+</button>
+    </div>
+
+    <script>
+        const disp = document.getElementById("display");
+        function appendVal(val) { disp.value += val; }
+        function clearDisp() { disp.value = ""; }
+        function calculate() {
+            try {
+                // Safe evaluation of basic math expression
+                disp.value = Function('"use strict";return (' + disp.value + ')')();
+            } catch {
+                disp.value = "Error";
+            }
+        }
+    </script>
+</body>
+</html>

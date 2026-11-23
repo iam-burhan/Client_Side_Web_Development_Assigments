@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q11 - Images, Hyperlinks & Table Attributes</title>
+</head>
+<body>
+    <h2>Images Inside Table Cells, Hyperlink Cells &amp; All Table Attributes</h2>
+    <!-- Demonstrating border, cellpadding, cellspacing, width, align, bgcolor, caption, thead, tbody, tfoot -->
+    <table border="2" cellpadding="10" cellspacing="4" width="75%" align="center" bgcolor="#f8fafc">
+        <caption><b>Table 1: Product Showcase with Images and Links</b></caption>
+        <thead>
+            <tr bgcolor="#cbd5e0">
+                <th>Product Preview (Image in Cell)</th>
+                <th>Product Name</th>
+                <th>Documentation (Hyperlink Cell)</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='50'><rect width='80' height='50' fill='%233182ce'/><text x='50%' y='50%' fill='white' font-size='12' text-anchor='middle' dy='.3em'>HTML5</text></svg>" alt="HTML5 Icon">
+                </td>
+                <td>HTML5 Reference Guide</td>
+                <td><a href="https://html.spec.whatwg.org/" target="_blank">Open Specification</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='50'><rect width='80' height='50' fill='%2338a169'/><text x='50%' y='50%' fill='white' font-size='12' text-anchor='middle' dy='.3em'>CSS3</text></svg>" alt="CSS3 Icon">
+                </td>
+                <td>CSS3 Layout Guide</td>
+                <td><a href="https://www.w3.org/Style/CSS/" target="_blank">Open W3C CSS</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr bgcolor="#edf2f7">
+                <td colspan="3" align="center"><i>End of Product Table</i></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

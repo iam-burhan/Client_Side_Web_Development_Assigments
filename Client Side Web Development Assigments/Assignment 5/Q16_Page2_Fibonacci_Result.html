@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q16 - Page 2 (Fibonacci Output)</title>
+</head>
+<body>
+    <h2>Page 2: First 10 Terms of Fibonacci Series</h2>
+    <label for="fibBox">Fibonacci Series:</label><br>
+    <input type="text" id="fibBox" size="45" readonly><br><br>
+    <!-- Back button returns to Page 1 -->
+    <button onclick="window.location.href='Q16_Page1_Fibonacci_Trigger.html'">Back</button>
+
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get("show") === "true") {
+                let fib = [0, 1];
+                for (let i = 2; i < 10; i++) {
+                    fib.push(fib[i - 1] + fib[i - 2]);
+                }
+                document.getElementById("fibBox").value = fib.join(", ");
+            }
+        };
+    </script>
+</body>
+</html>

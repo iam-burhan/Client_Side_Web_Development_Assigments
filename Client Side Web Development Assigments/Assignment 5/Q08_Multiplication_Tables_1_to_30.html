@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q8 - Multiplication Tables 1 to 30</title>
+    <style>
+        .grid { display: flex; flex-wrap: wrap; gap: 12px; }
+        .card { border: 1px solid #ccc; padding: 8px; width: 110px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h2>Multiplication Tables from 1 to 30</h2>
+    <div id="tablesContainer" class="grid"></div>
+
+    <script>
+        const container = document.getElementById("tablesContainer");
+        let html = "";
+        for (let n = 1; n <= 30; n++) {
+            html += `<div class="card"><b>Table of ${n}</b><br>`;
+            for (let i = 1; i <= 10; i++) {
+                html += `${n} x ${i} = ${n * i}<br>`;
+            }
+            html += `</div>`;
+        }
+        container.innerHTML = html;
+    </script>
+</body>
+</html>

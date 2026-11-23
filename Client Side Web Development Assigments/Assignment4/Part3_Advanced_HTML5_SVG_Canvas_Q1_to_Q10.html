@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Assignment 4 - Advanced Questions (Q1-Q10)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.5; }
+        .q-box { border: 1px solid #a0aec0; padding: 15px; margin-bottom: 20px; border-radius: 6px; }
+        h3 { margin-top: 0; color: #9b2c2c; }
+        .newspaper { display: flex; gap: 15px; }
+        .newspaper section { flex: 3; }
+        .newspaper aside { flex: 1; background: #f7fafc; padding: 10px; border-left: 2px solid #cbd5e0; }
+    </style>
+</head>
+<body>
+    <h1>HTML Assignment 4: HTML5 Semantic, SVG &amp; Canvas (Advanced Q1 - Q10)</h1>
+
+    <!-- Q1: Complete semantic webpage layout with demo content -->
+    <div class="q-box">
+        <h3>Q1. Complete Semantic Webpage Layout</h3>
+        <header>
+            <h2>Modern Web Chronicles</h2>
+            <nav><a href="#">Home</a> | <a href="#">Tutorials</a> | <a href="#">About</a></nav>
+        </header>
+        <main style="display:flex; gap:20px; margin-top:10px;">
+            <article style="flex:3;">
+                <h4>Mastering HTML5 Semantics</h4>
+                <p>Semantic elements give structure and clarity to modern web applications.</p>
+            </article>
+            <aside style="flex:1; background:#edf2f7; padding:8px;">
+                <b>Quick Links</b>
+                <ul><li>HTML5 Guide</li><li>CSS Grid</li></ul>
+            </aside>
+        </main>
+        <footer><small>&copy; 2026 Modern Web Chronicles</small></footer>
+    </div>
+
+    <!-- Q2: Blog webpage with 3 <article> posts, <time>, and <address> -->
+    <div class="q-box">
+        <h3>Q2. Blog Webpage with 3 Articles</h3>
+        <article>
+            <h4>1. Introduction to HTML5 Canvas</h4>
+            <p>Canvas allows pixel-level 2D rendering via JavaScript.</p>
+            <time datetime="2026-11-20">Nov 20, 2026</time> | <address style="display:inline;">By Aarav Sharma</address>
+        </article>
+        <hr>
+        <article>
+            <h4>2. Why Choose SVG for Icons?</h4>
+            <p>SVG scales infinitely without losing sharpness on Retina screens.</p>
+            <time datetime="2026-11-21">Nov 21, 2026</time> | <address style="display:inline;">By Ananya Patil</address>
+        </article>
+        <hr>
+        <article>
+            <h4>3. Web Accessibility Essentials</h4>
+            <p>Proper semantic tags ensure screen readers navigate pages smoothly.</p>
+            <time datetime="2026-11-22">Nov 22, 2026</time> | <address style="display:inline;">By Rohan Mehta</address>
+        </article>
+    </div>
+
+    <!-- Q3: Mini Photo Gallery with <figure> thumbnails -->
+    <div class="q-box">
+        <h3>Q3. Mini Photo Gallery</h3>
+        <figure style="display:inline-block; text-align:center;">
+            <svg width="100" height="80"><rect width="100" height="80" fill="#2b6cb0"/></svg>
+            <figcaption>Ocean View</figcaption>
+        </figure>
+        <figure style="display:inline-block; text-align:center;">
+            <svg width="100" height="80"><rect width="100" height="80" fill="#2f855a"/></svg>
+            <figcaption>Forest Trail</figcaption>
+        </figure>
+        <figure style="display:inline-block; text-align:center;">
+            <svg width="100" height="80"><rect width="100" height="80" fill="#dd6b20"/></svg>
+            <figcaption>Desert Dunes</figcaption>
+        </figure>
+    </div>
+
+    <!-- Q4: Newspaper Layout -->
+    <div class="q-box">
+        <h3>Q4. Newspaper Layout</h3>
+        <div class="newspaper">
+            <section>
+                <h4>HEADLINE: India Launches Next-Gen Digital Education Grid</h4>
+                <article>
+                    <p>Universities across Pune and Mumbai adopt cloud-native coding labs for students.</p>
+                </article>
+            </section>
+            <aside>
+                <h4>Weather &amp; Briefs</h4>
+                <p>Pune: 26&deg;C Clear Skies</p>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Q5: Sunset Scene in SVG -->
+    <div class="q-box">
+        <h3>Q5. SVG Sunset Scene</h3>
+        <svg width="300" height="160" style="border:1px solid #000; background:#fed7aa;">
+            <!-- Sun Rays -->
+            <line x1="150" y1="100" x2="150" y2="30" stroke="#dd6b20" stroke-width="3" />
+            <line x1="150" y1="100" x2="90" y2="50" stroke="#dd6b20" stroke-width="3" />
+            <line x1="150" y1="100" x2="210" y2="50" stroke="#dd6b20" stroke-width="3" />
+            <!-- Setting Sun -->
+            <circle cx="150" cy="105" r="35" fill="#f6ad55" />
+            <!-- Ground -->
+            <rect x="0" y="105" width="300" height="55" fill="#2f855a" />
+        </svg>
+    </div>
+
+    <!-- Q6: House Shape on Canvas -->
+    <div class="q-box">
+        <h3>Q6. House Shape on Canvas</h3>
+        <canvas id="houseCanvas" width="240" height="180" style="border:1px solid #000;"></canvas>
+    </div>
+
+    <!-- Q7: Two Rectangles with Linear Gradient Colors -->
+    <div class="q-box">
+        <h3>Q7. Canvas Linear Gradients</h3>
+        <canvas id="gradCanvas" width="300" height="100" style="border:1px solid #000;"></canvas>
+    </div>
+
+    <!-- Q8: Bouncing Ball Animation on Canvas -->
+    <div class="q-box">
+        <h3>Q8. Bouncing Ball Animation</h3>
+        <canvas id="bounceCanvas" width="300" height="120" style="border:1px solid #000;"></canvas>
+    </div>
+
+    <!-- Q9: Semantic Structure + Inline SVG Bar Chart -->
+    <div class="q-box">
+        <h3>Q9. Semantic Structure &amp; Inline SVG Bar Chart</h3>
+        <section>
+            <h4>Quarterly Sales Performance (SVG Chart)</h4>
+            <svg width="260" height="130" style="border-left:2px solid #000; border-bottom:2px solid #000;">
+                <rect x="20" y="60" width="35" height="70" fill="#3182ce" />
+                <rect x="75" y="30" width="35" height="100" fill="#38a169" />
+                <rect x="130" y="45" width="35" height="85" fill="#dd6b20" />
+                <rect x="185" y="15" width="35" height="115" fill="#805ad5" />
+            </svg>
+        </section>
+    </div>
+
+    <!-- Q10: Dashboard Page with Animated Canvas Graph -->
+    <div class="q-box">
+        <h3>Q10. Dashboard with Animated Canvas Graph</h3>
+        <header><b>Analytics Dashboard</b></header>
+        <nav><a href="#">Overview</a> | <a href="#">Live Traffic</a></nav>
+        <main>
+            <canvas id="dashGraph" width="320" height="110" style="border:1px solid #000;"></canvas>
+        </main>
+        <aside><small>Status: Live Monitoring Active</small></aside>
+        <footer><small>Dashboard v1.0</small></footer>
+    </div>
+
+    <script>
+        // Q6: Draw House on Canvas
+        const hCtx = document.getElementById('houseCanvas').getContext('2d');
+        // Roof (Triangle)
+        hCtx.beginPath();
+        hCtx.moveTo(120, 20);
+        hCtx.lineTo(50, 80);
+        hCtx.lineTo(190, 80);
+        hCtx.closePath();
+        hCtx.fillStyle = '#c53030';
+        hCtx.fill();
+        // House Body (Rectangle)
+        hCtx.fillStyle = '#edf2f7';
+        hCtx.fillRect(65, 80, 110, 80);
+        hCtx.strokeRect(65, 80, 110, 80);
+        // Window (Square)
+        hCtx.fillStyle = '#63b3ed';
+        hCtx.fillRect(85, 100, 30, 30);
+
+        // Q7: Two Rectangles with Linear Gradients
+        const gCtx = document.getElementById('gradCanvas').getContext('2d');
+        const grad1 = gCtx.createLinearGradient(10, 0, 130, 0);
+        grad1.addColorStop(0, '#3182ce');
+        grad1.addColorStop(1, '#63b3ed');
+        gCtx.fillStyle = grad1;
+        gCtx.fillRect(10, 20, 120, 60);
+
+        const grad2 = gCtx.createLinearGradient(160, 0, 280, 0);
+        grad2.addColorStop(0, '#dd6b20');
+        grad2.addColorStop(1, '#f6e05e');
+        gCtx.fillStyle = grad2;
+        gCtx.fillRect(160, 20, 120, 60);
+
+        // Q8: Bouncing Ball Animation
+        const bCanvas = document.getElementById('bounceCanvas');
+        const bCtx = bCanvas.getContext('2d');
+        let bx = 30, by = 30, dx = 2.5, dy = 2, radius = 12;
+        function animateBall() {
+            bCtx.clearRect(0, 0, bCanvas.width, bCanvas.height);
+            bCtx.beginPath();
+            bCtx.arc(bx, by, radius, 0, Math.PI * 2);
+            bCtx.fillStyle = '#e53e3e';
+            bCtx.fill();
+            if (bx + radius > bCanvas.width || bx - radius < 0) dx = -dx;
+            if (by + radius > bCanvas.height || by - radius < 0) dy = -dy;
+            bx += dx;
+            by += dy;
+            requestAnimationFrame(animateBall);
+        }
+        animateBall();
+
+        // Q10: Animated Live Line Graph on Dashboard
+        const dCanvas = document.getElementById('dashGraph');
+        const dCtx = dCanvas.getContext('2d');
+        let points = [50, 65, 40, 80, 55, 70, 45, 85, 60];
+        setInterval(() => {
+            points.shift();
+            points.push(Math.floor(Math.random() * 70) + 20);
+            dCtx.clearRect(0, 0, dCanvas.width, dCanvas.height);
+            dCtx.beginPath();
+            dCtx.strokeStyle = '#2b6cb0';
+            dCtx.lineWidth = 2;
+            points.forEach((val, idx) => {
+                const x = idx * 40;
+                const y = dCanvas.height - val;
+                if (idx === 0) dCtx.moveTo(x, y);
+                else dCtx.lineTo(x, y);
+            });
+            dCtx.stroke();
+        }, 800);
+    </script>
+</body>
+</html>

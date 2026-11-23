@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8 - Multimedia</title>
+</head>
+<body>
+    <h1>HTML5 Multimedia Embedding</h1>
+
+    <!-- Audio Element -->
+    <h2>1. Audio Player</h2>
+    <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the HTML5 audio element.
+    </audio>
+
+    <!-- Video Element -->
+    <h2>2. Local Video Player</h2>
+    <video width="400" height="240" controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='400' height='240' fill='%231a202c'/><text x='50%' y='50%' fill='white' text-anchor='middle'>Video Placeholder</text></svg>">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag.
+    </video>
+
+    <!-- YouTube Video Embed via Iframe -->
+    <h2>3. Embedded YouTube Video</h2>
+    <iframe width="420" height="240" 
+            src="https://www.youtube.com/embed/qz0aGYrrlhU" 
+            title="HTML Tutorial for Beginners" 
+            frameborder="0" 
+            allowfullscreen>
+    </iframe>
+</body>
+</html>

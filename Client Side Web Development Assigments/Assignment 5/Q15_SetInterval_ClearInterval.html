@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q15 - setInterval() and clearInterval()</title>
+</head>
+<body>
+    <h2>Live Digital Clock &amp; Counter (setInterval &amp; clearInterval)</h2>
+    <h3 id="clockDisplay">Click Start to run timer</h3>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+
+    <script>
+        let timerId = null;
+        let seconds = 0;
+
+        function startTimer() {
+            if (timerId !== null) return; // Prevent multiple intervals
+            timerId = setInterval(() => {
+                seconds++;
+                document.getElementById("clockDisplay").innerText = 
+                    `Elapsed Time: ${seconds}s | Current Time: ${new Date().toLocaleTimeString()}`;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerId);
+            timerId = null;
+        }
+    </script>
+</body>
+</html>

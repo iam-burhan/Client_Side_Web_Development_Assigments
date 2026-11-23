@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3 - Department Table with Rowspan</title>
+</head>
+<body>
+    <h2>Department &amp; Student Table (With Merged Semester Cells)</h2>
+    <!-- Demonstrating rowspan across Department and Semester columns -->
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Department</th>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Semester</th>
+        </tr>
+        <tr>
+            <td rowspan="3">MCA</td>
+            <td>101</td>
+            <td>A</td>
+            <td rowspan="2">II</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>C</td>
+            <td>II</td>
+        </tr>
+        <tr>
+            <td rowspan="2">MBA</td>
+            <td>201</td>
+            <td>D</td>
+            <td rowspan="2">II</td>
+        </tr>
+        <tr>
+            <td>202</td>
+            <td>E</td>
+        </tr>
+    </table>
+</body>
+</html>

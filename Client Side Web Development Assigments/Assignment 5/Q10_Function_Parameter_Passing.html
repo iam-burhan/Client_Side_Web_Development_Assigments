@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q10 - Functions with Parameter Passing</title>
+</head>
+<body>
+    <h2>JavaScript Function Parameter Passing Demo</h2>
+    <button onclick="greetUser('Aarav', 'MCA')">Call Function with Parameters</button>
+    <p id="fnOut"></p>
+
+    <script>
+        // Function accepting two parameters: studentName and course
+        function greetUser(studentName, course) {
+            document.getElementById("fnOut").innerText = 
+                `Hello ${studentName}! Welcome to the ${course} JavaScript Lab.`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q13 - Login Page Blank Field Validation</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form onsubmit="validateLogin(event)">
+        Username: <input type="text" id="loginUser"><br><br>
+        Password: <input type="password" id="loginPass"><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <p id="loginMsg" style="font-weight: bold;"></p>
+
+    <script>
+        function validateLogin(e) {
+            e.preventDefault();
+            const u = document.getElementById("loginUser").value.trim();
+            const p = document.getElementById("loginPass").value.trim();
+            const msg = document.getElementById("loginMsg");
+
+            if (u === "" && p === "") {
+                msg.style.color = "red";
+                msg.innerText = "Error: Both Username and Password fields are blank!";
+            } else if (u === "") {
+                msg.style.color = "red";
+                msg.innerText = "Error: Username cannot be blank!";
+            } else if (p === "") {
+                msg.style.color = "red";
+                msg.innerText = "Error: Password cannot be blank!";
+            } else {
+                msg.style.color = "green";
+                msg.innerText = `Success: Welcome back, ${u}!`;
+            }
+        }
+    </script>
+</body>
+</html>

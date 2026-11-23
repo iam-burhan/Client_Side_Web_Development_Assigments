@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q6 - Odd Numbers (1 to 100)</title>
+</head>
+<body>
+    <h2>Odd Numbers Between 1 and 100</h2>
+    <p id="oddOutput"></p>
+
+    <script>
+        let odds = [];
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 !== 0) {
+                odds.push(i);
+            }
+        }
+        document.getElementById("oddOutput").innerText = odds.join(", ");
+    </script>
+</body>
+</html>

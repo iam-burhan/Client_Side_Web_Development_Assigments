@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Assignment 4 - Intermediate Questions (Q1-Q20)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.5; }
+        .q-box { border: 1px solid #cbd5e0; padding: 14px; margin-bottom: 16px; border-radius: 6px; }
+        h3 { margin-top: 0; color: #2f855a; }
+    </style>
+</head>
+<body>
+    <h1>HTML Assignment 4: HTML5 Semantic, SVG &amp; Canvas (Intermediate Q1 - Q20)</h1>
+
+    <!-- Q1: Layout with header, nav, main, aside, footer -->
+    <div class="q-box">
+        <h3>Q1. Complete 5-Tag Semantic Layout</h3>
+        <header><b>Site Header</b></header>
+        <nav><a href="#">Home</a> | <a href="#">Blog</a></nav>
+        <main><p>Primary Main Content</p></main>
+        <aside><p>Sidebar Content</p></aside>
+        <footer><small>Site Footer</small></footer>
+    </div>
+
+    <!-- Q2: Multiple <section> elements under <main> -->
+    <div class="q-box">
+        <h3>Q2. Multiple Sections Under Main</h3>
+        <main>
+            <section><h4>Category: Technology</h4><p>Latest tech news.</p></section>
+            <section><h4>Category: Science</h4><p>Latest science discoveries.</p></section>
+        </main>
+    </div>
+
+    <!-- Q3: Blog post with <article> and author in <address> -->
+    <div class="q-box">
+        <h3>Q3. Blog Post with Author Address</h3>
+        <article>
+            <h4>Understanding Flexbox</h4>
+            <p>CSS Flexbox simplifies one-dimensional layouts.</p>
+            <address>Author: Ananya Patil (ananya@example.com)</address>
+        </article>
+    </div>
+
+    <!-- Q4: Header for navigation, Footer for copyright -->
+    <div class="q-box">
+        <h3>Q4. Header Nav &amp; Footer Copyright</h3>
+        <header><nav><a href="#">Home</a> | <a href="#">Docs</a></nav></header>
+        <footer>&copy; 2026 Web Portal Inc.</footer>
+    </div>
+
+    <!-- Q5: Two blog posts inside <main> -->
+    <div class="q-box">
+        <h3>Q5. Two Articles Inside Main</h3>
+        <main>
+            <article><h4>Post 1: HTML5</h4><p>Content of post 1.</p></article>
+            <article><h4>Post 2: CSS3</h4><p>Content of post 2.</p></article>
+        </main>
+    </div>
+
+    <!-- Q6: Aside showing related articles -->
+    <div class="q-box">
+        <h3>Q6. Aside with Related Articles</h3>
+        <aside>
+            <h4>Related Articles</h4>
+            <ul>
+                <li><a href="#">Semantic HTML Best Practices</a></li>
+                <li><a href="#">SVG vs Canvas Guide</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Q7: Image with title using <figure> inside <section> -->
+    <div class="q-box">
+        <h3>Q7. Figure Inside Section</h3>
+        <section>
+            <figure>
+                <svg width="120" height="60"><rect width="120" height="60" fill="#805ad5"/></svg>
+                <figcaption>Title: Purple Vector Banner</figcaption>
+            </figure>
+        </section>
+    </div>
+
+    <!-- Q8: <time> with date and time -->
+    <div class="q-box">
+        <h3>Q8. Date and Time Event</h3>
+        <p>Published on <time datetime="2025-08-20T17:00">20 August 2025, 5:00 PM</time></p>
+    </div>
+
+    <!-- Q9: Company contact page using <address> -->
+    <div class="q-box">
+        <h3>Q9. Company Contact Page</h3>
+        <address>
+            <b>NextGen Solutions Pvt. Ltd.</b><br>
+            Location: IT Park, Hinjewadi Phase 1, Pune<br>
+            Phone: <a href="tel:+912012345678">+91-20-12345678</a><br>
+            Email: <a href="mailto:contact@nextgensol.in">contact@nextgensol.in</a>
+        </address>
+    </div>
+
+    <!-- Q10: Magazine-like layout -->
+    <div class="q-box">
+        <h3>Q10. Magazine Layout</h3>
+        <section>
+            <h4>Cover Story</h4>
+            <article><h5>Future of AI in Web Dev</h5><p>AI tools are accelerating frontend workflows.</p></article>
+        </section>
+    </div>
+
+    <!-- Q11: Blue Rectangle inside SVG -->
+    <div class="q-box">
+        <h3>Q11. Blue SVG Rectangle</h3>
+        <svg width="150" height="70">
+            <rect x="10" y="10" width="130" height="50" fill="blue" />
+        </svg>
+    </div>
+
+    <!-- Q12: SVG with both Circle and Rectangle -->
+    <div class="q-box">
+        <h3>Q12. SVG Circle + Rectangle</h3>
+        <svg width="200" height="80">
+            <rect x="10" y="15" width="70" height="50" fill="orange" />
+            <circle cx="140" cy="40" r="25" fill="teal" />
+        </svg>
+    </div>
+
+    <!-- Q13: Triangle using <polygon> -->
+    <div class="q-box">
+        <h3>Q13. SVG Triangle (<polygon>)</h3>
+        <svg width="120" height="100">
+            <polygon points="60,10 10,90 110,90" fill="purple" />
+        </svg>
+    </div>
+
+    <!-- Q14: Line connecting two circles -->
+    <div class="q-box">
+        <h3>Q14. SVG Line Connecting Two Circles</h3>
+        <svg width="220" height="80">
+            <line x1="40" y1="40" x2="180" y2="40" stroke="black" stroke-width="3" />
+            <circle cx="40" cy="40" r="18" fill="crimson" />
+            <circle cx="180" cy="40" r="18" fill="navy" />
+        </svg>
+    </div>
+
+    <!-- Q15: Canvas with red filled rectangle -->
+    <div class="q-box">
+        <h3>Q15. Canvas Red Filled Rectangle</h3>
+        <canvas id="c15" width="200" height="80" style="border:1px solid #000;"></canvas>
+    </div>
+
+    <!-- Q16: Diagonal line on canvas -->
+    <div class="q-box">
+        <h3>Q16. Canvas Diagonal Line</h3>
+        <canvas id="c16" width="200" height="80" style="border:1px solid #000;"></canvas>
+    </div>
+
+    <!-- Q17: Filled blue circle on canvas -->
+    <div class="q-box">
+        <h3>Q17. Canvas Filled Blue Circle</h3>
+        <canvas id="c17" width="120" height="100" style="border:1px solid #000;"></canvas>
+    </div>
+
+    <!-- Q18: Multiple shapes in single canvas -->
+    <div class="q-box">
+        <h3>Q18. Multiple Shapes in Single Canvas</h3>
+        <canvas id="c18" width="260" height="100" style="border:1px solid #000;"></canvas>
+    </div>
+
+    <!-- Q19: SVG Ellipse filled green -->
+    <div class="q-box">
+        <h3>Q19. SVG Green Ellipse</h3>
+        <svg width="180" height="90">
+            <ellipse cx="90" cy="45" rx="70" ry="30" fill="green" />
+        </svg>
+    </div>
+
+    <!-- Q20: Semantic layout + Inline SVG below main -->
+    <div class="q-box">
+        <h3>Q20. Semantic Page + Inline SVG Below Main</h3>
+        <header><b>Header</b></header>
+        <main><p>Main section content</p></main>
+        <svg width="160" height="40"><rect width="160" height="40" fill="#319795"/></svg>
+        <aside><p>Aside content</p></aside>
+        <footer><small>Footer</small></footer>
+    </div>
+
+    <script>
+        // Q15: Red filled rectangle
+        const ctx15 = document.getElementById('c15').getContext('2d');
+        ctx15.fillStyle = 'red';
+        ctx15.fillRect(20, 15, 160, 50);
+
+        // Q16: Diagonal line top-left to bottom-right
+        const ctx16 = document.getElementById('c16').getContext('2d');
+        ctx16.beginPath();
+        ctx16.moveTo(0, 0);
+        ctx16.lineTo(200, 80);
+        ctx16.strokeStyle = 'black';
+        ctx16.lineWidth = 2;
+        ctx16.stroke();
+
+        // Q17: Filled blue circle
+        const ctx17 = document.getElementById('c17').getContext('2d');
+        ctx17.beginPath();
+        ctx17.arc(60, 50, 35, 0, Math.PI * 2);
+        ctx17.fillStyle = 'blue';
+        ctx17.fill();
+
+        // Q18: Circle, Rectangle, and Line in one canvas
+        const ctx18 = document.getElementById('c18').getContext('2d');
+        ctx18.fillStyle = 'green';
+        ctx18.fillRect(15, 20, 60, 50);
+        ctx18.beginPath();
+        ctx18.arc(130, 45, 25, 0, Math.PI * 2);
+        ctx18.fillStyle = 'orange';
+        ctx18.fill();
+        ctx18.beginPath();
+        ctx18.moveTo(180, 20);
+        ctx18.lineTo(240, 75);
+        ctx18.strokeStyle = 'purple';
+        ctx18.lineWidth = 3;
+        ctx18.stroke();
+    </script>
+</body>
+</html>

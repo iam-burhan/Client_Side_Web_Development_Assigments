@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q14 - Factorial of a Number</title>
+</head>
+<body>
+    <h2>Calculate Factorial</h2>
+    Enter a positive integer: <input type="number" id="factNum" min="0" max="20">
+    <button onclick="calcFactorial()">Calculate</button>
+    <p id="factOut" style="font-weight: bold;"></p>
+
+    <script>
+        function calcFactorial() {
+            const n = parseInt(document.getElementById("factNum").value);
+            if (isNaN(n) || n < 0) {
+                document.getElementById("factOut").innerText = "Please enter a non-negative number.";
+                return;
+            }
+            let fact = 1;
+            for (let i = 2; i <= n; i++) {
+                fact *= i;
+            }
+            document.getElementById("factOut").innerText = `Factorial of ${n} (${n}!) = ${fact}`;
+        }
+    </script>
+</body>
+</html>

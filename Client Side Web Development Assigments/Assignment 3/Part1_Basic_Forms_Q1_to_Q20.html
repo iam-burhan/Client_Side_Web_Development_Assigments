@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Assignment 3 - Basic Form Questions (Q1-Q20)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .q-box { border: 1px solid #ccc; padding: 12px; margin-bottom: 15px; border-radius: 5px; }
+        h3 { margin-top: 0; color: #2b6cb0; }
+    </style>
+</head>
+<body>
+    <h1>HTML Assignment 3: Forms (Basic Questions 1 - 20)</h1>
+
+    <!-- Q1: Single text input field for username -->
+    <div class="q-box">
+        <h3>Q1. Single Text Input (Username)</h3>
+        <form>
+            Username: <input type="text" name="username">
+        </form>
+    </div>
+
+    <!-- Q2: Password input field -->
+    <div class="q-box">
+        <h3>Q2. Password Input Field</h3>
+        <form>
+            Password: <input type="password" name="password">
+        </form>
+    </div>
+
+    <!-- Q3: First Name and Last Name -->
+    <div class="q-box">
+        <h3>Q3. First Name and Last Name</h3>
+        <form>
+            First Name: <input type="text" name="fname">
+            Last Name: <input type="text" name="lname">
+        </form>
+    </div>
+
+    <!-- Q4: Submit button -->
+    <div class="q-box">
+        <h3>Q4. Submit Button</h3>
+        <form action="#">
+            <input type="text" name="sample" placeholder="Enter data">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Q5: Reset button -->
+    <div class="q-box">
+        <h3>Q5. Reset Button</h3>
+        <form>
+            <input type="text" value="Clear this text">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
+    <!-- Q6: Radio buttons for gender -->
+    <div class="q-box">
+        <h3>Q6. Radio Buttons (Gender)</h3>
+        <form>
+            <input type="radio" name="gender" value="Male" id="g_m"> <label for="g_m">Male</label>
+            <input type="radio" name="gender" value="Female" id="g_f"> <label for="g_f">Female</label>
+        </form>
+    </div>
+
+    <!-- Q7: Checkboxes for hobbies -->
+    <div class="q-box">
+        <h3>Q7. Checkboxes (Hobbies)</h3>
+        <form>
+            <input type="checkbox" name="hobby" value="Reading"> Reading
+            <input type="checkbox" name="hobby" value="Sports"> Sports
+            <input type="checkbox" name="hobby" value="Coding"> Coding
+        </form>
+    </div>
+
+    <!-- Q8: File upload input -->
+    <div class="q-box">
+        <h3>Q8. File Upload Input (Profile Picture)</h3>
+        <form>
+            Upload Profile Picture: <input type="file" name="profile_pic">
+        </form>
+    </div>
+
+    <!-- Q9: Label tag linked via 'for' and 'id' -->
+    <div class="q-box">
+        <h3>Q9. Properly Labeled Text Input</h3>
+        <form>
+            <label for="cityInput">Enter City:</label>
+            <input type="text" id="cityInput" name="city">
+        </form>
+    </div>
+
+    <!-- Q10: Dropdown menu using <select> -->
+    <div class="q-box">
+        <h3>Q10. Country Dropdown Menu</h3>
+        <form>
+            <label for="country">Choose Country:</label>
+            <select id="country" name="country">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Japan">Japan</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- Q11: Textarea for comments -->
+    <div class="q-box">
+        <h3>Q11. Textarea for User Comments</h3>
+        <form>
+            <textarea name="comments" rows="3" cols="40" placeholder="Write your comments here..."></textarea>
+        </form>
+    </div>
+
+    <!-- Q12: Button element labelled Click Me -->
+    <div class="q-box">
+        <h3>Q12. Button Element</h3>
+        <form>
+            <button type="button" onclick="alert('Button Clicked!')">Click Me</button>
+        </form>
+    </div>
+
+    <!-- Q13: Required attribute -->
+    <div class="q-box">
+        <h3>Q13. Required Attribute</h3>
+        <form action="#">
+            Name (Required): <input type="text" name="req_name" required>
+            <input type="submit" value="Test Required">
+        </form>
+    </div>
+
+    <!-- Q14: Email input validation -->
+    <div class="q-box">
+        <h3>Q14. Email Input Type</h3>
+        <form action="#">
+            Email: <input type="email" name="user_email" required>
+            <input type="submit" value="Validate Email">
+        </form>
+    </div>
+
+    <!-- Q15: Number input for age -->
+    <div class="q-box">
+        <h3>Q15. Number Input (Age)</h3>
+        <form>
+            Age: <input type="number" name="age">
+        </form>
+    </div>
+
+    <!-- Q16: Date picker input -->
+    <div class="q-box">
+        <h3>Q16. Date Picker (Birthdate)</h3>
+        <form>
+            Birthdate: <input type="date" name="dob">
+        </form>
+    </div>
+
+    <!-- Q17: Time input -->
+    <div class="q-box">
+        <h3>Q17. Time Input (Appointment)</h3>
+        <form>
+            Appointment Time: <input type="time" name="appt_time">
+        </form>
+    </div>
+
+    <!-- Q18: Color input -->
+    <div class="q-box">
+        <h3>Q18. Colour Input</h3>
+        <form>
+            Favourite Color: <input type="color" name="fav_color" value="#3182ce">
+        </form>
+    </div>
+
+    <!-- Q19: Range input (1-100) -->
+    <div class="q-box">
+        <h3>Q19. Range Input (Volume 1-100)</h3>
+        <form>
+            Volume: <input type="range" name="volume" min="1" max="100" value="50">
+        </form>
+    </div>
+
+    <!-- Q20: Fieldset and Legend -->
+    <div class="q-box">
+        <h3>Q20. Fieldset and Legend</h3>
+        <form>
+            <fieldset>
+                <legend>Personal Details</legend>
+                Name: <input type="text" name="p_name"><br><br>
+                Email: <input type="email" name="p_email">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

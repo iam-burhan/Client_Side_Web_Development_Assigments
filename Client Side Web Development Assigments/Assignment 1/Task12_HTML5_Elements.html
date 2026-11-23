@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 12 - HTML5 Interactive & Semantic Elements</title>
+</head>
+<body>
+    <h1>HTML5 Specialized Elements</h1>
+
+    <!-- Details and Summary (Accordion) -->
+    <h2>1. Details & Summary</h2>
+    <details>
+        <summary>Click to view Course Prerequisites</summary>
+        <p>Basic knowledge of computers, file systems, and internet browsing is required.</p>
+    </details>
+
+    <!-- Progress Bar -->
+    <h2>2. Progress Element</h2>
+    <label for="course-progress">Syllabus Completion (75%):</label>
+    <progress id="course-progress" value="75" max="100">75%</progress>
+
+    <!-- Meter Gauge -->
+    <h2>3. Meter Element</h2>
+    <label for="disk-usage">Server Disk Usage:</label>
+    <meter id="disk-usage" value="0.6" min="0" max="1">60%</meter>
+
+    <!-- Figure and Figcaption -->
+    <h2>4. Figure & Figcaption</h2>
+    <figure>
+        <svg width="160" height="80">
+            <rect width="160" height="80" fill="#3182ce" rx="8" />
+        </svg>
+        <figcaption>Fig 1: HTML5 SVG Graphic inside a Figure container.</figcaption>
+    </figure>
+
+    <!-- Dialog Element -->
+    <h2>5. Dialog Element</h2>
+    <dialog open>
+        <p>Welcome! This is an HTML5 native <code>&lt;dialog&gt;</code> box.</p>
+    </dialog>
+</body>
+</html>

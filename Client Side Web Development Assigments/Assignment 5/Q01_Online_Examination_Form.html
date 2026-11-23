@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q1 - Online Examination Form</title>
+</head>
+<body>
+    <h2>Online Examination Form</h2>
+    <form id="examForm" onsubmit="evaluateExam(event)">
+        <label>Student Name:</label>
+        <input type="text" id="stuName" required><br><br>
+
+        <p><b>1. Which tag is used to include JavaScript in HTML?</b></p>
+        <input type="radio" name="q1" value="script"> &lt;script&gt;<br>
+        <input type="radio" name="q1" value="js"> &lt;js&gt;<br>
+
+        <p><b>2. Which keyword declares a block-scoped variable in JS?</b></p>
+        <input type="radio" name="q2" value="let"> let<br>
+        <input type="radio" name="q2" value="int"> int<br><br>
+
+        <button type="submit">Submit Exam</button>
+    </form>
+    <h3 id="scoreDisplay"></h3>
+
+    <script>
+        // Evaluates selected radio options and computes total marks
+        function evaluateExam(e) {
+            e.preventDefault();
+            let score = 0;
+            const name = document.getElementById("stuName").value;
+            const ans1 = document.querySelector('input[name="q1"]:checked');
+            const ans2 = document.querySelector('input[name="q2"]:checked');
+
+            if (ans1 && ans1.value === "script") score += 5;
+            if (ans2 && ans2.value === "let") score += 5;
+
+            document.getElementById("scoreDisplay").innerText = 
+                `Candidate: ${name} | Total Score: ${score} / 10`;
+        }
+    </script>
+</body>
+</html>

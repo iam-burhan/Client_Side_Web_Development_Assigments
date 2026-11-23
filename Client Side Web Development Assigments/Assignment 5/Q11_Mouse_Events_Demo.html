@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q11 - Mouse Events Demonstration</title>
+</head>
+<body>
+    <h2>JavaScript Mouse Events (onclick, dblclick, mouseup, mouseover)</h2>
+    <button id="eventBtn" style="padding: 15px 25px; font-size: 16px;">
+        Interact With Me
+    </button>
+    <p id="eventLog" style="font-weight: bold; color: #2b6cb0;">Status: Waiting for mouse event...</p>
+
+    <script>
+        const btn = document.getElementById("eventBtn");
+        const log = document.getElementById("eventLog");
+
+        btn.onclick = () => log.innerText = "Event Triggered: onclick (Single Click)";
+        btn.ondblclick = () => log.innerText = "Event Triggered: dblclick (Double Click)";
+        btn.onmouseup = () => console.log("mouseup triggered");
+        btn.addEventListener("mouseup", () => {
+            log.innerText += " | mouseup detected";
+        });
+        btn.onmouseover = () => {
+            btn.style.backgroundColor = "#bee3f8";
+            log.innerText = "Event Triggered: mouseover (Cursor hovered over button)";
+        };
+    </script>
+</body>
+</html>

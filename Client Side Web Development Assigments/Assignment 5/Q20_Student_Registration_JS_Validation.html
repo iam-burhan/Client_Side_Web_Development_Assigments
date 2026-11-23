@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q20 - Student Registration Form with JS Validation</title>
+</head>
+<body>
+    <h2>Student Registration Form (JavaScript Validation)</h2>
+    <form onsubmit="validateStudentForm(event)">
+        Student Name *: <input type="text" id="stName"><br><br>
+        Email Address *: <input type="text" id="stEmail"><br><br>
+        Mobile Number (10 digits) *: <input type="text" id="stMobile"><br><br>
+        <button type="submit">Validate &amp; Submit</button>
+    </form>
+    <p id="valStatus" style="font-weight: bold;"></p>
+
+    <script>
+        function validateStudentForm(e) {
+            e.preventDefault();
+            const name = document.getElementById("stName").value.trim();
+            const email = document.getElementById("stEmail").value.trim();
+            const mobile = document.getElementById("stMobile").value.trim();
+            const status = document.getElementById("valStatus");
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const mobileRegex = /^[0-9]{10}$/;
+
+            if (name === "") {
+                status.style.color = "red";
+                status.innerText = "Error: Student Name is required.";
+            } else if (!emailRegex.test(email)) {
+                status.style.color = "red";
+                status.innerText = "Error: Please enter a valid Email Address.";
+            } else if (!mobileRegex.test(mobile)) {
+                status.style.color = "red";
+                status.innerText = "Error: Mobile Number must be exactly 10 digits.";
+            } else {
+                status.style.color = "green";
+                status.innerText = "Validation Passed! Student registered successfully.";
+            }
+        }
+    </script>
+</body>
+</html>

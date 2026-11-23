@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 6 - Images & Gallery</title>
+</head>
+<body>
+    <h1>Images and Gallery</h1>
+
+    <!-- Resized and Aligned Image (Using inline SVG data URI so it works offline without broken links) -->
+    <h2>1. Resized Image</h2>
+    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='150'><rect width='300' height='150' fill='%232b6cb0'/><text x='50%' y='50%' fill='white' font-size='20' text-anchor='middle' dy='.3em'>Sample Banner 300x150</text></svg>" 
+         alt="Sample Banner" width="300" height="150" border="2">
+
+    <!-- Image used as a Hyperlink -->
+    <h2>2. Image as a Hyperlink</h2>
+    <a href="Task01_First_HTML_Page.html" title="Click image to visit Task 1">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='80'><rect width='200' height='80' fill='%232f855a'/><text x='50%' y='50%' fill='white' font-size='16' text-anchor='middle' dy='.3em'>Click Me (Link)</text></svg>" 
+             alt="Clickable Button Image">
+    </a>
+
+    <!-- Simple Image Gallery -->
+    <h2>3. Mini Photo Gallery</h2>
+    <div>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><rect width='150' height='150' fill='%23dd6b20'/><text x='50%' y='50%' fill='white' text-anchor='middle' dy='.3em'>Photo 1</text></svg>" alt="Photo 1">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><rect width='150' height='150' fill='%23805ad5'/><text x='50%' y='50%' fill='white' text-anchor='middle' dy='.3em'>Photo 2</text></svg>" alt="Photo 2">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><rect width='150' height='150' fill='%23d53f8c'/><text x='50%' y='50%' fill='white' text-anchor='middle' dy='.3em'>Photo 3</text></svg>" alt="Photo 3">
+    </div>
+</body>
+</html>

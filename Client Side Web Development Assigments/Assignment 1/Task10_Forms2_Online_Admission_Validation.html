@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 10 - Online Admission Form</title>
+</head>
+<body>
+    <h1>Online Admission Form (With HTML5 Validation)</h1>
+    <form action="#" method="post">
+        <label for="fullname">Applicant Name *:</label><br>
+        <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Enter full name"><br><br>
+
+        <label for="email">Email Address *:</label><br>
+        <input type="email" id="email" name="email" required placeholder="student@example.com"><br><br>
+
+        <label for="phone">Mobile Number (10 digits) *:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="9876543210"><br><br>
+
+        <label for="age">Age (18 to 35) *:</label><br>
+        <input type="number" id="age" name="age" min="18" max="35" required><br><br>
+
+        <label for="percentage">Graduation Percentage *:</label><br>
+        <input type="number" id="percentage" name="percentage" min="50" max="100" step="0.01" required><br><br>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</body>
+</html>

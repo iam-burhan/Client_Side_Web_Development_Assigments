@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q22 - Multiplication Table & Validation</title>
+</head>
+<body id="pageBody">
+    <h2>Multiplication Table Generator</h2>
+    Enter a number: <input type="text" id="tableNumInput">
+    <button onclick="printTable()">Print Table</button><br><br>
+    <textarea id="tableArea" rows="11" cols="25" readonly></textarea>
+
+    <script>
+        function printTable() {
+            const rawVal = document.getElementById("tableNumInput").value.trim();
+            const area = document.getElementById("tableArea");
+            const body = document.getElementById("pageBody");
+
+            // Check if input is empty or not a valid number
+            if (rawVal === "" || isNaN(rawVal)) {
+                body.style.backgroundColor = "red";
+                area.value = "";
+                alert("Invalid Input! Please enter a valid number.");
+                return;
+            }
+
+            // Reset background color when valid number is entered
+            body.style.backgroundColor = "white";
+            const num = Number(rawVal);
+            let lines = [];
+            for (let i = 1; i <= 10; i++) {
+                lines.push(`${num} x ${i} = ${num * i}`);
+            }
+            area.value = lines.join("
+");
+        }
+    </script>
+</body>
+</html>

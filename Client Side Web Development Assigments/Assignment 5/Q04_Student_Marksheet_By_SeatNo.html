@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q4 - Student Marksheet by Seat Number</title>
+</head>
+<body>
+    <h2>University Result Portal</h2>
+    Enter Seat Number (Try 1001, 1002, or 1003):
+    <input type="text" id="seatInput" placeholder="e.g. 1001">
+    <button onclick="showMarksheet()">Get Result</button>
+    <div id="resultArea" style="margin-top: 15px;"></div>
+
+    <script>
+        // Predefined student database keyed by seat number
+        const records = {
+            "1001": { name: "Aarav Sharma", web: 88, dbms: 84, os: 90 },
+            "1002": { name: "Ananya Patil", web: 94, dbms: 91, os: 89 },
+            "1003": { name: "Rohan Mehta", web: 76, dbms: 80, os: 79 }
+        };
+
+        function showMarksheet() {
+            const seat = document.getElementById("seatInput").value.trim();
+            const student = records[seat];
+            const area = document.getElementById("resultArea");
+
+            if (!student) {
+                area.innerHTML = "<p style='color:red;'>Invalid Seat Number! Try 1001, 1002, or 1003.</p>";
+                return;
+            }
+            const total = student.web + student.dbms + student.os;
+            area.innerHTML = `
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <tr><th colspan="2">Marksheet - Seat No: ${seat} (${student.name})</th></tr>
+                    <tr><td>Web Technologies</td><td>${student.web}</td></tr>
+                    <tr><td>DBMS</td><td>${student.dbms}</td></tr>
+                    <tr><td>Operating Systems</td><td>${student.os}</td></tr>
+                    <tr><th>Total Marks</th><th>${total} / 300</th></tr>
+                </table>`;
+        }
+    </script>
+</body>
+</html>

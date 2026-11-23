@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q17 - Append Selected Numbers (Max 10)</title>
+</head>
+<body>
+    <h2>Append Dropdown Number to Text Box (Max 10 Numbers)</h2>
+    <select id="numSelect">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+        <option value="60">60</option>
+        <option value="70">70</option>
+        <option value="80">80</option>
+        <option value="90">90</option>
+        <option value="100">100</option>
+    </select>
+    <button onclick="appendNumber()">&rarr;</button>
+    <input type="text" id="selectedBox" size="45" readonly placeholder="Selected numbers appear here...">
+    <p id="limitMsg" style="color: red;"></p>
+
+    <script>
+        let chosenNumbers = [];
+        function appendNumber() {
+            if (chosenNumbers.length >= 10) {
+                document.getElementById("limitMsg").innerText = "Maximum limit of 10 numbers reached!";
+                return;
+            }
+            const val = document.getElementById("numSelect").value;
+            chosenNumbers.push(val);
+            document.getElementById("selectedBox").value = chosenNumbers.join(", ");
+        }
+    </script>
+</body>
+</html>

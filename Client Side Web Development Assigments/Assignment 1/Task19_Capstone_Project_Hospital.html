@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CityCare Multispeciality Hospital - Healthcare Services and Online Appointment">
+    <title>Task 19 - Capstone Project: CityCare Hospital</title>
+</head>
+<body>
+    <header>
+        <h1>CityCare Multispeciality Hospital</h1>
+        <p>24/7 Emergency &amp; Advanced Healthcare Services</p>
+        <nav>
+            <a href="#departments">Departments</a> |
+            <a href="#doctors">Doctors Schedule</a> |
+            <a href="#appointment">Book Appointment</a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section id="departments">
+            <h2>Medical Departments</h2>
+            <ul>
+                <li>Cardiology &amp; Heart Care</li>
+                <li>Neurology &amp; Brain Sciences</li>
+                <li>Orthopedics &amp; Joint Replacement</li>
+                <li>Pediatrics &amp; Neonatology</li>
+            </ul>
+        </section>
+
+        <section id="doctors">
+            <h2>OPD Doctors Schedule</h2>
+            <table border="1" cellpadding="8" cellspacing="0" width="70%">
+                <tr bgcolor="#e2e8f0">
+                    <th>Doctor Name</th>
+                    <th>Department</th>
+                    <th>OPD Timings</th>
+                </tr>
+                <tr>
+                    <td>Dr. R. K. Sharma</td>
+                    <td>Cardiology</td>
+                    <td>10:00 AM - 02:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Dr. Priya Patil</td>
+                    <td>Neurology</td>
+                    <td>03:00 PM - 07:00 PM</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="appointment">
+            <h2>Book an Online Appointment</h2>
+            <form action="#" method="post">
+                <label for="pname">Patient Name:</label><br>
+                <input type="text" id="pname" name="pname" required><br><br>
+
+                <label for="dept">Department:</label><br>
+                <select id="dept" name="dept">
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Orthopedics">Orthopedics</option>
+                </select><br><br>
+
+                <label for="adate">Preferred Date:</label><br>
+                <input type="date" id="adate" name="adate" required><br><br>
+
+                <button type="submit">Confirm Appointment</button>
+            </form>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2026 CityCare Multispeciality Hospital. Emergency Helpline: 108</p>
+    </footer>
+</body>
+</html>

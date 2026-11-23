@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q5 - Even Numbers (1 to 100)</title>
+</head>
+<body>
+    <h2>Even Numbers Between 1 and 100</h2>
+    <p id="evenOutput"></p>
+
+    <script>
+        let evens = [];
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 === 0) {
+                evens.push(i);
+            }
+        }
+        document.getElementById("evenOutput").innerText = evens.join(", ");
+    </script>
+</body>
+</html>

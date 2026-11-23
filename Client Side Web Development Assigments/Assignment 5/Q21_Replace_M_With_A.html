@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q21 - Replace 'm' with 'a'</title>
+</head>
+<body>
+    <h2>Replace All Occurrences of 'm' with 'a'</h2>
+    Enter a string: <input type="text" id="strInput" placeholder="e.g. programming">
+    <button onclick="replaceChar()">Replace</button>
+    <p id="strOutput" style="font-weight: bold;"></p>
+
+    <script>
+        function replaceChar() {
+            const input = document.getElementById("strInput").value;
+            // Global regex /m/g replaces every lowercase 'm' with 'a'
+            const modified = input.replace(/m/g, "a");
+            document.getElementById("strOutput").innerText = `Modified String: ${modified}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q18 - Maximum of Two Numbers</title>
+</head>
+<body>
+    <h2>Find Maximum of Two Numbers</h2>
+    Number 1: <input type="number" id="numA"><br><br>
+    Number 2: <input type="number" id="numB"><br><br>
+    <button onclick="findMax()">Find Maximum</button>
+    <h3 id="maxResult"></h3>
+
+    <script>
+        function findMax() {
+            const a = parseFloat(document.getElementById("numA").value);
+            const b = parseFloat(document.getElementById("numB").value);
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("maxResult").innerText = "Please enter both numbers.";
+                return;
+            }
+            const maxVal = (a > b) ? a : b;
+            document.getElementById("maxResult").innerText = `Maximum Number is: ${maxVal}`;
+        }
+    </script>
+</body>
+</html>

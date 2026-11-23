@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q19 - Arithmetic Operations</title>
+</head>
+<body>
+    <h2>Arithmetic Operations on Two Numbers</h2>
+    First Number: <input type="number" id="op1"><br><br>
+    Second Number: <input type="number" id="op2"><br><br>
+
+    <button onclick="add()">Addition (+)</button>
+    <button onclick="subtract()">Subtraction (-)</button>
+    <button onclick="multiply()">Multiplication (*)</button>
+    <button onclick="divide()">Division (/)</button>
+
+    <h3 id="arithOut"></h3>
+
+    <script>
+        function getInputs() {
+            return [
+                parseFloat(document.getElementById("op1").value),
+                parseFloat(document.getElementById("op2").value)
+            ];
+        }
+        function add() {
+            const [a, b] = getInputs();
+            document.getElementById("arithOut").innerText = `Addition: ${a + b}`;
+        }
+        function subtract() {
+            const [a, b] = getInputs();
+            document.getElementById("arithOut").innerText = `Subtraction: ${a - b}`;
+        }
+        function multiply() {
+            const [a, b] = getInputs();
+            document.getElementById("arithOut").innerText = `Multiplication: ${a * b}`;
+        }
+        function divide() {
+            const [a, b] = getInputs();
+            if (b === 0) {
+                document.getElementById("arithOut").innerText = "Error: Division by zero!";
+            } else {
+                document.getElementById("arithOut").innerText = `Division: ${(a / b).toFixed(2)}`;
+            }
+        }
+    </script>
+</body>
+</html>
